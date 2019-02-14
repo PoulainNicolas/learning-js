@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <button onclick="faireChoix()">Cliquez</button>
+    <script>
+        function faireChoix() {
+            let valeur = prompt('Choisissez une valeur 1, 2 ou 3');
+            switch(valeur) {
+                case "1":
+                    alert('Merci');
+                    break;
+                case "2": 
+                    alert('Bonjour');
+                    break;
+                case "3": 
+                    alert("Au revoir");
+                    break;
+                default: 
+                    alert('Pardon, que voulez-vous?');
+            }
+
+        }
+    </script>
+</body>
+</html>

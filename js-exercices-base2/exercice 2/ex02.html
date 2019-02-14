@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ex02</title>
+</head>
+<body>
+    <h1>Calcul de la surface d'un cercle</h1>
+    <form action="">
+        <label for="rayon">Quel est le rayon?</label><input type="text" id="rayon" name="rayon">
+    </form>
+
+    <button onclick="surface()">Voir la surface</button>
+
+    <script>
+        
+        function surface() {
+            var x = document.getElementById('rayon').value;
+            result = Math.PI * (x * x)
+
+            alert("La surface du cercle est de " + result + " " + "cm²");
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ex09</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    
+    <button onclick="testWhile()">Cliquez</button>
+
+    <script>
+        function testWhile() {
+            let n = false;
+            let phrase;
+            while(n==false) {
+                phrase = prompt("Veuillez saisir une chaine de caractères contenant la lettre p");
+                n = phrase.includes("p");
+
+            }
+            alert('\"' + phrase + '\"');
+        }
+    </script>
+
+</body>
+</html>

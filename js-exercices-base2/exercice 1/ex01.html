@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ex01</title>
+    
+</head>
+<body>
+    <button onclick="surfaceRectangle()">Calculer la surface d'un rectangle</button>
+    <button onclick="periRectangle()">Calculer le périmètre d'un rectangle</button>
+
+    <script>
+        function surfaceRectangle() {
+            var longueur = prompt("Longueur");
+            var largeur = prompt("Largeur");
+            var resultat =  alert("La surface du rectangle est de " + longueur * largeur +" " + "m²");
+
+            // return alert("La surface du rectangle est de " + " " + resultat + " " + "m²");
+            
+        }
+    </script>
+    <script>
+        function periRectangle() {
+            var x = prompt("Longueur");
+            var y = prompt("Largeur");
+            var resultat = alert("Le périmetre du rectangle est de " + (x * 2 + y * 2) + " " + "m");
+        }
+    </script>
+</body>
+</html>
