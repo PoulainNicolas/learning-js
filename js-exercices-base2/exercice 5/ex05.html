@@ -5,24 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ex05</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 </head>
 <body>
-    <button onclick="">Afficher</button>
+    <h2>b est toujours initialisée à 2 Quel est le résultat des opérations suivantes ?</h2>
+    <button onclick="calcule(b++)">a=b++</button>
+    <button onclick="calcule(++b)">a=++b</button>
+    <button onclick="calcule(b--)">a=b--</button>
+    <button onclick="calcule(--b)">a=--b</button>
+    <button onclick="calcule()">a+=b++</button>
+
+    <!--a =1-->
+    <button onclick="calcule()">a=b++</button>
+    <button onclick="calcule()">a=b++</button>
+    <button onclick="calcule()">a=b++</button>
+    <button onclick="calcule()">a=b++</button>
+    <button onclick="calcule()">a=b++</button>
+
+
 
     <script>
-        let b = 2;
-        a = b++;
+        
+        function calcule(operation){
+            let a=0;
+            let b=2;
+            let result = a=operation;
 
-        function calcule(){
-            
+            alert("Résultat de l'opération " + result +"\n Valeur de a après l'opération " + a +"\n Valeur de b après l'opération " +b);
+        
         }
         
-        function affiche() {
-
-        }
+        
     </script>
-
+<!--
+a=b++;
+a=++b;
+a=b--;
+a=--b;
+a+=b++;
+a=1; a+=++b;
+a=1; a-=b++;
+a=1; a-=++b;
+a=1; a+=b--;
+a=1; a+=--b;
+-->
 </body>
 </html>

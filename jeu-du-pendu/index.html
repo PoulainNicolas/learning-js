@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jeu du pendu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <button onclick="guessLetter()">Cliquez ici</button>
+
+
+
+    <script>
+            let motSecret = ['B', 'O', 'N', 'J', 'O', 'U', 'R'];
+            let lettresDevinees = ['', '', '', '', '', '', ''];
+            
+
+            function guessLetter(){
+                let x = prompt("Veuillez saisir une lettre");
+                for(let i=0; i<motSecret.length; i++){
+                    if(motSecret[i] === x){
+                        lettresDevinees.splice(i, 1, x);
+                        console.log(i);
+                        console.log(lettresDevinees);
+                        alert("Bien joué");
+                        break;
+                    } else {
+                        alert("Perdu. Recommence");
+                    }
+                }
+            }
+
+            /*let fin = 0;
+            for(let i = 0; i<motSecret.length; i++){
+            if(motSecret[i] === lettresDevinees[i]){
+                fin++;
+            }
+            if(fin === lettresDevinees.length){
+                alert("Bien joué! Tu as trouvé")
+            }
+            }*/
+
+
+
+
+            /*
+            let motSecret = ['B', 'O', 'N', 'J', 'O', 'U', 'R'];
+            let lettresDevinees = ['', '', '', '', '', '', ''];
+
+        function guessLetter(){
+            let x = prompt('Veuillez saisir une lettre');
+            // console.log(x);
+            // console.log(motSecret);
+            
+            for(let i=0; i<motSecret.length; i++){
+                // x=prompt("Veuillez saisir une lettre");
+
+                if(motSecret.indexOf(x) === 0){
+                    
+                    lettresDevinees.splice(0, 1, x);
+                    alert("Bien joué!");
+                    // x = prompt("Veuillez saisir une lettre");              
+                    console.log(lettresDevinees);
+                    } 
+                    
+                    else if(motSecret.indexOf(x) === 1){
+                    lettresDevinees.splice(1, 1, x);
+                    lettresDevinees.splice(4, 1, x);
+                    alert("Bien joué!");
+                    // x = prompt("Veuillez saisir une lettre");
+                    
+                    console.log(lettresDevinees);
+                    }
+                    else if(motSecret.indexOf(x) === 2){
+                        lettresDevinees.splice(2, 1, x);
+                        alert("Bien joué!");
+                        console.log(lettresDevinees);
+                    }
+                    else if(motSecret.indexOf(x) === 3){
+                        lettresDevinees.splice(3, 1, x);
+                        alert("Bien joué!");
+                        console.log(lettresDevinees);
+                    }
+                    else if(motSecret.indexOf(x) ===5){
+                        lettresDevinees.splice(5, 1, x);
+                        alert("Bien joué!");
+                        console.log(lettresDevinees);
+                    }
+                    else if(motSecret.indexOf(x) ===6){
+                        lettresDevinees.splice(6, 1, x);
+                        alert("Bien joué!")
+                        console.log(lettresDevinees);
+                    } 
+                    else {
+                        alert("Perduuuuu!");
+                        x= prompt("Veuillez saisir une lettre");
+                        
+                    }
+            } 
+            alert("Félicitations! Vous avez trouvé le mot!")
+        }*/
+
+    </script>
+    
+</body>
+</html>

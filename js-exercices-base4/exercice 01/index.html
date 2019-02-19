@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 1</title>
+  </head>
+  <body>
+      <img src="images/image1.jpg" id="image1"/>
+  </body>
+
+  <script>
+      document.getElementById('image1').addEventListener("mouseenter", borderColor);
+      document.getElementById('image1').addEventListener("mouseout", borderColor);
+      let x = 0;
+      function borderColor(){ 
+          if (x===0){
+            document.getElementById('image1').style.border= "3px solid red";
+            x=1;
+          } else {
+            document.getElementById('image1').style.border= "0px solid red";
+            x=0;
+          }
+          
+      }
+  </script>
+
+</html>

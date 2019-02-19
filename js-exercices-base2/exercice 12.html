@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ex 12</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    
+    <ol start="0">
+        <li>Fin du programme</li>
+        <li>De Celsius vers Fahrenheit</li>
+        <li>De Celsius vers Kelvin</li>
+        <li>De Fahrenheit vers Celsius</li>
+        <li>De Fahrenheit vers Kelvin</li>
+        <li>De Kelvin vers Celsius</li>
+        <li>De Kelvin vers Fahrenheit</li>
+    </ol>
+    
+    <button onclick="convertirTemperature()">Cliquez pour convertir des températures</button>
+
+    <script>
+    
+        function convertirTemperature() {
+
+            let choix;
+            let degreCelsius;
+            let degreFarenheit;
+            let degreKelvin;
+
+            choix = prompt("Indiquez le chiffre correspondant au type de conversion souhaité");
+            switch(choix){
+                case "1": 
+                    degreCelsius = prompt("Indiquez les Celsius à convertir en Farenheit");
+                    alert(degreFarenheit = (degreCelsius*9/5) + 32);
+                    break;
+                case "2": 
+                    degreCelsius = prompt("Indiquez les Celsius à convertir en Kelvin");
+                    alert(degreKelvin = degreCelsius + parseFloat(273.15));
+                    break;
+                case "3": 
+                    degreFarenheit = Number(prompt("Indiquez les degrés Farenheit à convertir en degrés Celsius"));
+                    alert(degreCelsius = (degreFarenheit - 32) / (9 / 5));
+                    break;
+                case "4": 
+                    degreFarenheit = Number(prompt("Indiquez les degrés Farenheit à convertir en Kelvin"));
+                    alert(degreKelvin = ((degreFarenheit - 32) * (5/9)) + 273.15);
+                    break;
+                case "5": 
+                    degreKelvin = Number(prompt("Indiquez les degrés Kelvin à convertir en degrés Celsius"));
+                    alert(degreCelsius = degreKelvin - 273.15);
+                    break;
+                case "6": 
+                    degreKelvin = Number(prompt("Indiquez les degrés Kelvin à convertir en degrés Farenheit"));
+                    alert(Math.round((degreKelvin * 9/5) - 459.67));
+                    break;
+                
+                default: 
+                    break;
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>

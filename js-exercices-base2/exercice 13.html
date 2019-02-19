@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ex13</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <button onclick="calculImc()">Cliquez ici pour calculer votre Indice de masse corporelle</button>
+
+    <script>
+        
+        function calculImc() {
+            let poids;
+            let taille;
+            let imc;
+            
+            taille = Number(prompt("Veuillez indiquer quel est votre taille en mètre"));
+            poids = Number(prompt("Veuillez indiquez quel est votre poids en kilos"));
+            imc = poids / taille**2;
+
+            if(imc<16.5) {
+                alert("Votre imc est de "+ imc.toFixed(2) +"\ndénutrition - famine");
+            } else if((imc>=16.5) && (imc<18.5)) {
+                alert("Votre imc est de "+ imc.toFixed(2) +"\nmaigreur");
+            } else if ((imc>=18.5) && (imc<25)){
+                alert("Votre imc est de "+ imc.toFixed(2) +"\ncorpulence normale");
+            } else if ((imc>=25)&&(imc<30)){
+                alert("Votre imc est de "+ imc.toFixed(2) +"\nsurpoids")
+            } else if ((imc>=30)&&(imc<35)){
+                alert("Votre imc est de "+ imc.toFixed(2) +"\nobésité modérée")
+            } else if ((imc>=35)&&(imc<40)){
+                alert("Votre imc est de "+ imc.toFixed(2) +"\nobésité sévère")
+            } else {
+                alert("Votre imc est de "+ imc.toFixed(2) +"\nobésité mobide");
+            }
+
+        }
+    </script>
+
+</body>
+</html>

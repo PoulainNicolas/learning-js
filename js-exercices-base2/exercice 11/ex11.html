@@ -9,16 +9,85 @@
 <body>
     <button onclick="calculMoyenne()">Cliquez</button>
     <script>
-        function calculMoyenne() {
 
-            nombre = Number.isInteger(prompt("Veuillez entrer un nombre entier"));
-            if(nombre != Number.isInteger)
-            alert('Erreur! Vous devez entrer un nombre entier.');
+        function calculMoyenne(){
+        
+        let somme;
+        let moyenne = 0;
+        let x = 0; 
+        let i = 0;
+            
+        while(x>=0){
+            do{
+                x = prompt("Veuillez entrer un nombre entier");
+                if (x != parseInt(x)){alert("Veuillez entrer un nombre ENTIER!");}
+            } while (x != parseInt(x));
+            if (x<0){break;}
+                somme=x++;
+                moyenne = (somme/(i));
+                i++;
 
-            for
-                    
+            }
+            
+        
+        alert(somme + " "+ moyenne+ " " + i);
         }
-    
+
+        
+        /*do {
+            for(let i=0; i>=0; i++){
+                x = prompt("Veuillez entrer un nombre entier");
+                let somme = (x++);
+            } 
+            }while (x<o){
+                moyenne = (somme/i);
+            }
+        }
+        
+        alert(somme + moyenne +i);*/
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*function calculMoyenne() {
+            let nombre;
+            let addition = 0;
+            let i = 0;
+            let moyenne;
+            
+            do {
+                do {
+                    nombre = prompt("Veuillez entrer un nombre entier");
+                    if(nombre != Number(parseInt(nombre)))
+                    alert('Erreur! Vous devez entrer un nombre entier.');
+
+                } while (nombre != Number(parseInt(nombre)))
+
+                if(nombre<0)
+                break;
+                addition += Number(nombre);
+                i++;
+            } while (nombre>=0)
+            moyenne = (addition/i);
+            alert("Nombre de valeurs entrées " + i + " Moyenne " + moyenne);
+        }*/
     </script>
 </body>
 </html>
